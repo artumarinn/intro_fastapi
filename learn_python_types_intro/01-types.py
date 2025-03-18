@@ -93,3 +93,13 @@ print(user)
 # > User id=123 name='John Doe' signup_ts=datetime.datetime(2017, 6, 1, 12, 22) friends=[1, 2, 3]
 print(user.id)
 # > 123
+
+# Annotated -> añadir metadatos adicionales a los tipos de las variables
+
+from typing import Annotated
+
+def say_hello(name: Annotated[str, "this is just metadata"]) -> str:
+    return f"Hello {name}"
+
+print(say_hello("Arturo"))
+
